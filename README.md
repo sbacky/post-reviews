@@ -11,7 +11,8 @@ os.listdir("/data/feedback")
 Good deal for a 2015 RAV4
 Anonymous
 2018-04-17
-Called them to look for a second-hand RAV4 and they are very nice and patient to help me find a few matches then scheduled an appointment...
+Called them to look for a second-hand RAV4 and they are very nice and patient 
+to help me find a few matches then scheduled an appointment...
 ```
 * Now, you need to have a dictionary with keys and their respective values (content from feedback files). This will be uploaded through the Django REST API.
 ```python
@@ -20,7 +21,8 @@ review = [
     "title": "Good deal for a 2015 RAV4",
     "name": "Anonymous",
     "date": "2018-04-17",
-    "feedback": "Called them to look for a second-hand RAV4 and they are very nice and patient to help me find a few matches then scheduled an appointment..."
+    "feedback": "Called them to look for a second-hand RAV4 and they are very nice and patient 
+    to help me find a few matches then scheduled an appointment..."
   },
   {
   ...
@@ -29,7 +31,7 @@ review = [
 ```
 * Use the Python requests module to post the dictionary to the company's website. Use the request.post() method to make a POST request to:
 ```
-http://<corpweb-external-IP>/feedback
+http://<corpweb-external-IP>/feedback/
 ```
 Replace <corpweb-external-IP> with the corporate websites external IP address.
 * Make sure an error message isn't returned. You can print the status_code and text of the response objects to check out what's going on. You can also use the response status_code 201 for created success status response code that indicates the request has succeeded.
