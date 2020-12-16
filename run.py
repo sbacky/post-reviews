@@ -13,8 +13,6 @@ def getInfo(fullPath):
     post["name"] = txt.readline().strip()
     post["date"] = txt.readline().strip()
     post["feedback"] = txt.read().strip()
-    print(post.keys())
-    print(post)
     txt.close()
     return post
 
@@ -23,8 +21,6 @@ def postInfo(d):
     url = "http://35.225.76.124/feedback/"
     js = json.dumps(d)
     response = requests.post(url, data=js)
-    print(response.request.url)
-    print(response.request.body)
     print(response.status_code)
 
 def dirCheck(dir):
